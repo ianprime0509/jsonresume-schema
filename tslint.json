@@ -1,0 +1,23 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended"],
+  "jsRules": {},
+  "linterOptions": {
+    "exclude": ["**/*.json", "**/*.d.ts"]
+  },
+  "rules": {
+    "arrow-parens": false,
+    "interface-name": false,
+    "trailing-comma": false,
+    "no-conditional-assignment": false,
+    "no-unused-expression": false,
+    "quotemark": [true, "single", "avoid-escape"],
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore"
+    ]
+  },
+  "rulesDirectory": []
+}

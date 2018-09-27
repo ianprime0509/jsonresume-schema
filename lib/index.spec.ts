@@ -4,14 +4,14 @@
  * @copyright 2018 Ian Johnson
  * @license MIT
  */
-import 'mocha';
 import { expect } from 'chai';
+import 'mocha';
 
 import { isValid } from './index';
 
 import complete from '../examples/valid/complete.json';
-import empty from '../examples/valid/empty.json';
 import emptyMeta from '../examples/valid/empty-meta.json';
+import empty from '../examples/valid/empty.json';
 
 import basicsWrongType from '../examples/invalid/basics-wrong-type.json';
 import invalidEmail from '../examples/invalid/invalid-email.json';

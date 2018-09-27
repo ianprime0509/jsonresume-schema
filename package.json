@@ -6,11 +6,13 @@
   "types": "dist/lib/index.d.ts",
   "scripts": {
     "build": "run-s gen-schema-types compile",
+    "check-style": "npx prettier -l resume.schema.json lib/**/*.json lib/**/*.ts",
     "compile": "tsc",
     "gen-schema-types": "json2ts -i resume.schema.json -o lib/schema.d.ts && cp lib/schema.d.ts dist/lib/",
+    "lint": "tslint -p tsconfig.json",
     "prepare": "run-s build",
     "run-tests": "mocha -r ts-node/register lib/**/*.spec.ts",
-    "test": "run-s gen-schema-types run-tests"
+    "test": "run-s gen-schema-types check-style lint run-tests"
   },
   "repository": {
     "type": "git",
@@ -40,7 +42,9 @@
     "json-schema-to-typescript": "^6.0.1",
     "mocha": "^5.2.0",
     "npm-run-all": "^4.1.3",
+    "prettier": "^1.14.3",
     "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
     "typescript": "^3.1.1"
   }
 }
