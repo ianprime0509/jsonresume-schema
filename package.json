@@ -1,0 +1,35 @@
+{
+  "name": "jsonresume-schema",
+  "version": "1.0.0",
+  "description": "An unofficial fork of the JSON Resume schema, with TypeScript support.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "gen-schema-types": "json2ts -i resume.schema.json -o lib/schema.d.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianprime0509/jsonresume-schema.git"
+  },
+  "keywords": [
+    "json",
+    "resume",
+    "schema"
+  ],
+  "author": {
+    "name": "Ian Johnson",
+    "email": "ianprime0509@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ianprime0509/jsonresume-schema/issues"
+  },
+  "homepage": "https://github.com/ianprime0509/jsonresume-schema#readme",
+  "dependencies": {
+    "ajv": "^6.5.4"
+  },
+  "devDependencies": {
+    "json-schema-to-typescript": "^6.0.1"
+  }
+}
