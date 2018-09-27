@@ -3,7 +3,7 @@
   "title": "JSON Resume",
   "type": "object",
   "additionalProperties": false,
-  "properties": {
+  "definitions": {
     "basics": {
       "type": "object",
       "additionalProperties": true,
@@ -466,5 +466,19 @@
         }
       }
     }
+  },
+  "properties": {
+    "basics": { "$ref": "#/definitions/basics" },
+    "work": { "$ref": "#/definitions/work" },
+    "volunteer": { "$ref": "#/definitions/volunteer" },
+    "education": { "$ref": "#/definitions/education" },
+    "awards": { "$ref": "#/definitions/awards" },
+    "publications": { "$ref": "#/definitions/publications" },
+    "skills": { "$ref": "#/definitions/skills" },
+    "languages": { "$ref": "#/definitions/languages" },
+    "interests": { "$ref": "#/definitions/interests" },
+    "references": { "$ref": "#/definitions/references" },
+    "projects": { "$ref": "#/definitions/projects" },
+    "meta": { "$ref": "#/definitions/meta" }
   }
 }

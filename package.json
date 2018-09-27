@@ -5,8 +5,9 @@
   "main": "dist/lib/index.js",
   "types": "dist/lib/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "gen-schema-types": "json2ts -i resume.schema.json -o lib/schema.d.ts",
+    "build": "run-s gen-schema-types compile",
+    "compile": "tsc",
+    "gen-schema-types": "json2ts -i resume.schema.json -o lib/schema.d.ts && cp lib/schema.d.ts dist/lib/",
     "run-tests": "mocha -r ts-node/register lib/**/*.spec.ts",
     "test": "run-s gen-schema-types run-tests"
   },
