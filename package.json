@@ -1,6 +1,6 @@
 {
-  "name": "jsonresume-schema",
-  "version": "1.0.0",
+  "name": "@ianprime0509/jsonresume-schema",
+  "version": "0.0.1",
   "description": "An unofficial fork of the JSON Resume schema, with TypeScript support.",
   "main": "dist/lib/index.js",
   "types": "dist/lib/index.d.ts",
@@ -8,6 +8,7 @@
     "build": "run-s gen-schema-types compile",
     "compile": "tsc",
     "gen-schema-types": "json2ts -i resume.schema.json -o lib/schema.d.ts && cp lib/schema.d.ts dist/lib/",
+    "prepare": "run-s build",
     "run-tests": "mocha -r ts-node/register lib/**/*.spec.ts",
     "test": "run-s gen-schema-types run-tests"
   },

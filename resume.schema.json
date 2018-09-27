@@ -297,6 +297,7 @@
       "items": {
         "type": "object",
         "additionalProperties": true,
+        "required": ["name"],
         "properties": {
           "name": {
             "type": "string",
@@ -325,6 +326,7 @@
       "items": {
         "type": "object",
         "additionalProperties": true,
+        "required": ["language"],
         "properties": {
           "language": {
             "type": "string",
@@ -343,6 +345,7 @@
       "items": {
         "type": "object",
         "additionalProperties": true,
+        "required": ["name"],
         "properties": {
           "name": {
             "type": "string",
