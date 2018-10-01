@@ -1,6 +1,6 @@
 {
   "name": "@ianprime0509/jsonresume-schema",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An unofficial fork of the JSON Resume schema, with TypeScript support.",
   "main": "dist/lib/index.js",
   "types": "dist/lib/index.d.ts",
