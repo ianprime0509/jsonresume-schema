@@ -7,7 +7,7 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import { isValid } from './index';
+import { isValid, validate } from './index';
 
 import complete from '../examples/valid/complete.json';
 import emptyMeta from '../examples/valid/empty-meta.json';
@@ -26,5 +26,18 @@ describe('isValid', () => {
   it('should reject invalid input', () => {
     expect(isValid(basicsWrongType)).to.be.false;
     expect(isValid(invalidEmail)).to.be.false;
+  });
+});
+
+describe('validate', () => {
+  it('should return an empty array on valid input', () => {
+    expect(validate(complete)).to.be.an('array').that.is.empty;
+    expect(validate(empty)).to.be.an('array').that.is.empty;
+    expect(validate(emptyMeta)).to.be.an('array').that.is.empty;
+  });
+
+  it('should return an array with error info on invalid input', () => {
+    expect(validate(basicsWrongType)).to.be.an('array').that.is.not.empty;
+    expect(validate(invalidEmail)).to.be.an('array').that.is.not.empty;
   });
 });
