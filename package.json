@@ -6,7 +6,7 @@
   "types": "dist/lib/index.d.ts",
   "scripts": {
     "build": "run-s gen-schema-types compile",
-    "check-style": "npx prettier -l resume.schema.json lib/**/*.json lib/**/*.ts",
+    "check-style": "prettier -l resume.schema.json lib/**/*.json lib/**/*.ts",
     "compile": "tsc -p tsconfig.lib.json",
     "gen-schema-types": "json2ts -i resume.schema.json -o lib/schema.d.ts && cp lib/schema.d.ts dist/lib/",
     "lint": "tslint -p tsconfig.json",
