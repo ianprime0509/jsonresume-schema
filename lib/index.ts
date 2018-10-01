@@ -21,6 +21,7 @@ const validator = ajv.compile(schema);
  * such additional information is unnecessary.
  *
  * @param data the object to check
+ * @returns whether the given object is a valid JSON Resume
  */
 export function isValid(data: any): data is JSONResume {
   return validator(data) as boolean;
