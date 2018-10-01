@@ -17,27 +17,45 @@ import basicsWrongType from '../examples/invalid/basics-wrong-type.json';
 import invalidEmail from '../examples/invalid/invalid-email.json';
 
 describe('isValid', () => {
-  it('should verify valid input', () => {
+  it('returns true when given a complete, valid resume', () => {
     expect(isValid(complete)).to.be.true;
+  });
+
+  it('returns true when given an empty resume object', () => {
     expect(isValid(empty)).to.be.true;
+  });
+
+  it('returns true when given a resume with an empty meta object', () => {
     expect(isValid(emptyMeta)).to.be.true;
   });
 
-  it('should reject invalid input', () => {
+  it('returns false when given a resume where the basics property is an array', () => {
     expect(isValid(basicsWrongType)).to.be.false;
+  });
+
+  it('returns false when given a resume with an invalid email address', () => {
     expect(isValid(invalidEmail)).to.be.false;
   });
 });
 
 describe('validate', () => {
-  it('should return an empty array on valid input', () => {
+  it('returns an empty array when given a complete, valid resume', () => {
     expect(validate(complete)).to.be.an('array').that.is.empty;
+  });
+
+  it('returns an empty array when given an empty resume object', () => {
     expect(validate(empty)).to.be.an('array').that.is.empty;
+  });
+
+  it('returns an empty array when given a resume with an empty meta object', () => {
     expect(validate(emptyMeta)).to.be.an('array').that.is.empty;
   });
 
-  it('should return an array with error info on invalid input', () => {
+  it('returns a non-empty array when given a resume where the basics property is an array', () => {
     expect(validate(basicsWrongType)).to.be.an('array').that.is.not.empty;
+  });
+
+  it('returns a non-empty array when given a resume with an invalid email address', () => {
     expect(validate(invalidEmail)).to.be.an('array').that.is.not.empty;
   });
 });
