@@ -8,6 +8,15 @@ Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to
 
 ## [Unreleased]
 
+### Added
+
+- `validate` function, which returns error information on validation failure
+
+### Changed
+
+- `isValid` function now takes a parameter of type `any`, fixing earlier type
+  of `object`
+
 ## [0.0.1] - 2018-09-27
 
 ### Added
