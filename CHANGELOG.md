@@ -8,6 +8,8 @@ Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to
 
 ## [Unreleased]
 
+## [0.0.3] - 2018-10-08
+
 ### Changed
 
 - Refactor section types (e.g. `Skills`) to be arrays of objects (e.g.
