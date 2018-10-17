@@ -29,6 +29,7 @@
   },
   "work": [
     {
+      "importance": 10,
       "name": "Pied Piper",
       "location": "Palo Alto, CA",
       "description": "Awesome compression company",
@@ -57,6 +58,7 @@
   ],
   "education": [
     {
+      "importance": 10,
       "institution": "University of Oklahoma",
       "area": "Information Technology",
       "studyType": "Bachelor",
@@ -68,6 +70,7 @@
   ],
   "awards": [
     {
+      "importance": 5,
       "title": "Digital Compression Pioneer Award",
       "date": "2014-11-01",
       "awarder": "Techcrunch",
@@ -76,6 +79,7 @@
   ],
   "publications": [
     {
+      "importance": 2,
       "name": "Video compression for 3d media",
       "publisher": "Hooli",
       "releaseDate": "2014-10-01",
@@ -85,11 +89,13 @@
   ],
   "skills": [
     {
+      "importance": 5,
       "name": "Web Development",
       "level": "Master",
       "keywords": ["HTML", "CSS", "Javascript"]
     },
     {
+      "importance": 5,
       "name": "Compression",
       "level": "Master",
       "keywords": ["Mpeg", "MP4", "GIF"]
@@ -97,6 +103,7 @@
   ],
   "languages": [
     {
+      "importance": 2,
       "language": "English",
       "fluency": "Native speaker"
     }
@@ -115,6 +122,7 @@
   ],
   "projects": [
     {
+      "importance": 5,
       "name": "Miss Direction",
       "description": "A mapping engine that misguides you",
       "highlights": [

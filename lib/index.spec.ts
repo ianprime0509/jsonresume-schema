@@ -15,6 +15,7 @@ import empty from '../examples/valid/empty.json';
 
 import basicsWrongType from '../examples/invalid/basics-wrong-type.json';
 import invalidEmail from '../examples/invalid/invalid-email.json';
+import negativeImportance from '../examples/invalid/negative-importance.json';
 
 describe('isValid', () => {
   it('returns true when given a complete, valid resume', () => {
@@ -35,6 +36,10 @@ describe('isValid', () => {
 
   it('returns false when given a resume with an invalid email address', () => {
     expect(isValid(invalidEmail)).to.be.false;
+  });
+
+  it('returns false when given a resume containing a negative importance value', () => {
+    expect(isValid(negativeImportance)).to.be.false;
   });
 });
 
@@ -57,5 +62,9 @@ describe('validate', () => {
 
   it('returns a non-empty array when given a resume with an invalid email address', () => {
     expect(validate(invalidEmail)).to.be.an('array').that.is.not.empty;
+  });
+
+  it('returns a non-empty array when given a resume containing a negative importance value', () => {
+    expect(validate(negativeImportance)).to.be.an('array').that.is.not.empty;
   });
 });
