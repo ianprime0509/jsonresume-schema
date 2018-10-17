@@ -13,6 +13,10 @@ Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to
 - `importance` property to items in all sections except basics, to
   indicate how essential an item is to a complete resume
 
+### Changed
+
+- Improved descriptions of schema definitions and properties
+
 ## [0.0.3] - 2018-10-08
 
 ### Changed
