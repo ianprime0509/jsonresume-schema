@@ -8,6 +8,8 @@ Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to
 
 ## [Unreleased]
 
+## [0.0.4] - 2018-10-17
+
 ### Added
 
 - `importance` property to items in all sections except basics, to
